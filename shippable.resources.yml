@@ -1,14 +1,14 @@
 resources:
   - name: sample_prodCiPipelinesRepo
     type: gitRepo
-    integration: github
+    integration: deepika-git
     pointer:
-      sourceName: "shiptestlink/deploy-newIntegrations"
+      sourceName: "deepikasl/deploy-newIntegrations"
       branch: master
    
   - name: deploy_img
     type: image
-    integration: docker
+    integration: deepika-docker
     pointer:
       sourceName: "shippabledocker/pipelinev2"
     seed:
@@ -16,7 +16,7 @@ resources:
   
   - name: deploy_img2
     type: image
-    integration: docker
+    integration: deepika-docker
     pointer:
       sourceName: "shippabledocker/pipelinev2"
     seed:
@@ -24,17 +24,17 @@ resources:
       
   - name: oldawsIam_cluster
     type: cluster
-    integration: awsiamold
+    integration: deepika-aws
     pointer:
-      sourceName : "testiam"
-      region: "us-east-1"
+      sourceName : "deploy-ecs-basic-shippable"
+      region: "us-east-2"
   
   - name: newawsIam_cluster
     type: cluster
-    integration: awsiamnew 
+    integration: deepika-aws
     pointer:
-      sourceName : "testiam"
-      region: "us-east-1"
+      sourceName : "deploy-ecs-basic-shippable"
+      region: "us-east-2"
     
   - name: awsiam_dopts
     type: dockerOptions
@@ -44,7 +44,7 @@ resources:
     
   - name: test_out_img
     type: image
-    integration: docker
+    integration: deepika-docker
     pointer:
       sourceName: "shippabledocker/ship_plv2node"
     seed:
@@ -53,11 +53,11 @@ resources:
     
   - name: ship_oldawsiamint
     type: integration
-    integration: "awsiamold"  
+    integration: "deepika-aws"  
   
   - name: ship_newawsiamint
     type: integration
-    integration: "awsiamnew" 
+    integration: "deepika-aws" 
     
   - name: test_params
     type: params
