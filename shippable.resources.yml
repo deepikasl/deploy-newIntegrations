@@ -38,7 +38,7 @@ resources:
     
   - name: awsiam_dopts
     type: dockerOptions
-    version:
+    #version:
       #memoryReservation: 64
     flags: awsiam_options  
     
