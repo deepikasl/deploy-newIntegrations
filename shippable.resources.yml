@@ -59,7 +59,7 @@ resources:
     type: integration
     integration: "deepika-aws" 
     
-  - name: test_params
+  - name: test_params-1
     type: params
     version:
       params:
